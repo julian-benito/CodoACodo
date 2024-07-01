@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", async () => {
-  const res = await fetch(`http://localhost:8080/listado`);
+  const res = await fetch(`/listado`);
   const datos = await res.json();
   let listaHTML = document.querySelector(`#listado`);
   listaHTML.innerHTML = "";

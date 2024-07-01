@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", async function () {
   try {
-    const res = await fetch(`http://localhost:8080/tienda`);
+    const res = await fetch(`/tienda`);
     if (!res.ok) {
       throw new Error('Network response was not ok');
     }
