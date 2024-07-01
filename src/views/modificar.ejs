@@ -1,0 +1,58 @@
+<%- include('partials/head') %>
+<body>
+  <nav>
+
+    <div class="nav__container">
+
+      <div class="nav__mobile">
+        <a href="/index.html"><img src="./imagenes/iconos/icono3.png" alt="" class="img__logo"></a>
+        <a class="abrirMenu" id="abrir"><img src="/imagenes/iconos/align-justify.png" alt="" class="abrir"></a>
+        <a class="cerrarMenu cerrar" id="cerrar"><img src="/imagenes/iconos/cerrar.png" alt=""></a>
+      </div>
+
+      <div class="nav__menu nav__oculto">
+
+        <ul class="nav__links">
+          <li class="links__link link__mobile"><a href="/usuario.html" class="link__enlace">Usuario</a></li>
+          <li class="links__link link__mobile"><a href="/carrito" class="link__enlace">Carrito</a></li>
+          <li class="links__link"><a href="/products.html" class="link__enlace">Productos</a></li>
+          <li class="links__link"><a href="/tienda.html" class="link__enlace">Tienda</a></li>
+          <li class="links__link"><a href="/nosotros.html" class="link__enlace">Nosotros</a></li>
+          <li class="links__link"><a href="/contacto.html" class="link__enlace">Contacto</a></li>
+
+        </ul>
+
+        <div class="nav__icons">
+          <a href="/carrito"><img src="./Imagenes/iconos/shopping-cart.png" alt="" class="nav__icon"><span id="cuentaCarrito">0</span></a>
+          <img src="./Imagenes/iconos/user.png" alt="">
+        </div>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+  <section>
+
+    <h2>Modificar el producto</h2>
+
+    <article class="listado__title">
+      <h4>Nombre</h4>
+      <h4>Origen</h4>
+      <h4>Precio</h4>
+      <h4>Urlimagen</h4>
+    </article>
+
+    <form action="/modificar?_metodo=PUT" method="POST">
+      <input type="text" name="nombre" value="<%= registro.nombre %>">
+      <input type="text" name="origen" value="<%= registro.origen %>">
+      <input type="number" name="precio" value="<%= registro.precio %>">
+      <input type="text" name="urlimagen" value="<%= registro.urlimagen %>">
+      <input type="hidden" name="idMod" value="<%= registro.id %>">
+      <input type="submit" value="Actualizar">
+    </form>
+
+  </section>
+</body>
+</html>

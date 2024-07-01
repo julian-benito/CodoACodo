@@ -1,0 +1,109 @@
+@import url(/styles/navbar.css);
+
+section {
+  box-sizing: border-box;
+  width: 99.5vw;
+  height: 100vh;
+  padding: 3rem 2rem;
+  margin: 0 auto;
+  background: #f5f7f8;
+  overflow: hidden;
+
+  & h2 {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2rem;
+    font-weight: 360;
+    color: #202020;
+    position: relative;
+    margin-top: 2rem;
+  }
+
+  & h2::before {
+    content: "";
+    position: absolute;
+    width: 70%;
+    height: 1px;
+    background-color: #202020;
+    top: 105%;
+    border-radius: 5px;
+  }
+
+  & .listado__title {
+    box-sizing: border-box;
+    width: 63%;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 0.9rem;
+    line-height: 23.4px;
+    margin-top: 1rem;
+  }
+
+  & #listado {
+    width: 100%;
+    margin-top: 1rem;
+
+    & div {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+
+      & h4 {
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 0.9rem;
+        line-height: 23.4px;
+        margin-top: 0.7rem;
+        font-weight: 400;
+      }
+
+      & button {
+        background-color: #202020;
+        color: #f5f7f8;
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 0.9rem;
+        line-height: 23.4px;
+        margin-top: 0.7rem;
+        font-weight: 200;
+        padding: 0.1rem 0.6rem;
+        border-radius: 18px;
+      }
+
+      & a {
+        background-color: #202020;
+        color: #f5f7f8;
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 0.9rem;
+        line-height: 23.4px;
+        margin-top: 0.7rem;
+        font-weight: 200;
+        padding: 0.1rem 0.6rem;
+        border-radius: 18px;
+      }
+    }
+  }
+
+  & form {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 0.9rem;
+    line-height: 23.4px;
+    margin-top: 0.7rem;
+    margin-top: 4rem;
+
+    & input {
+      border-radius: 8px;
+      border: 1px solid #cfcbcba9;
+      padding: 0.5rem;
+      font-family: "Josefin Sans", sans-serif;
+    }
+
+    & input:last-child{
+      background-color: #caaa66;
+      color: #202020;
+      font-weight: 600;
+    }
+  }
+}
