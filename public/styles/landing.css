@@ -17,6 +17,7 @@
   justify-content: center;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   border-radius: 0 0 18px 18px;
+  margin-bottom: 0.2rem;
 
   & img {
     display: flex;
@@ -328,7 +329,7 @@
   margin: 8rem 0 3rem 0;
   width: 100%;
   height: auto;
-  min-height: 70vh;
+  min-height: 60vh;
   overflow: hidden;
   display: flex;
   justify-content: space-between;
