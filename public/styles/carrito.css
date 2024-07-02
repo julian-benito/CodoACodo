@@ -56,11 +56,11 @@ section {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 
     & img {
-      width: 15%;
+      width: 50%;
       object-fit: cover;
       filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.411));
     }
