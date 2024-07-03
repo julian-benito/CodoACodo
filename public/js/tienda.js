@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   try {
     const res = await fetch(`/tienda`);
     if (!res.ok) {
-      throw new Error('Network response was not ok');
+      throw new Error('Error en la conexion');
     }
     const datos = await res.json();
     let contenedorProductos = document.getElementById("productos__container");

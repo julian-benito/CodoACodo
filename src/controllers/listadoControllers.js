@@ -6,7 +6,9 @@ module.exports = {
   getListadoTienda: async (req, res) => {
     //res.sendFile(path.resolve(__dirname + './../views/listado.html'));
     try {
-      const [ registros ] = await conn.query(`SELECT * FROM productos`)
+      const [ registros ] = await conn.query(`SELECT productos.*, categorias.nombre AS nombre_categoria 
+        FROM productos 
+        JOIN categorias ON productos.categoria_id = categorias.id`)
       res.json(registros)
     } catch (error) {
       throw error
@@ -18,7 +20,9 @@ module.exports = {
   getListado: async (req, res) => {
       //res.sendFile(path.resolve(__dirname + './../views/listado.html'));
       try {
-        const [ registros ] = await conn.query(`SELECT * FROM productos`)
+        const [ registros ] = await conn.query(`SELECT productos.*, categorias.nombre AS nombre_categoria 
+        FROM productos 
+        JOIN categorias ON productos.categoria_id = categorias.id`)
         res.json(registros)
       } catch (error) {
         throw error
@@ -28,9 +32,10 @@ module.exports = {
   },
 
   crearRegistro: async (req, res) => {
-    const sql = `INSERT INTO productos (nombre, origen, precio, urlimagen) VALUES (?,?,?,?);`
-		const creado = await conn.query(sql, [req.body.nombre, req.body.origen, parseFloat(req.body.precio), req.body.urlimagen])
-		res.redirect('/listado.html')//ver lo del path
+    const sql = `INSERT INTO productos (nombre, origen, precio, urlimagen, categoria_id) VALUES (?, ?, ?, ?, ?)`;
+    const creado = await conn.query(sql, [req.body.nombre, req.body.origen, parseFloat(req.body.precio), req.body.urlimagen, req.body.categoria_id]);
+    console.log("Nuevo producto creado:", creado);
+    res.redirect('/listado.html');
   },
 
   getModificar: async (req, res) => {
@@ -42,11 +47,11 @@ module.exports = {
   },
 
   actualizar: async (req, res) => {
-    const sql = `UPDATE productos SET nombre=?, origen=?, precio=?, urlimagen=? WHERE id=?`
-    const {idMod, nombre, origen, precio, urlimagen} = req.body
-    const modificado = await conn.query(sql, [nombre, origen, precio, urlimagen, idMod])
-    console.log(modificado)
-    res.redirect('/listado.html')
+    const sql = `UPDATE productos SET nombre=?, origen=?, precio=?, urlimagen=?, categoria_id=? WHERE id=?`;
+    const { idMod, nombre, origen, precio, urlimagen, categoria_id } = req.body;
+    const modificado = await conn.query(sql, [nombre, origen, parseFloat(precio), urlimagen, parseFloat(categoria_id), idMod]);
+    console.log("Producto modificado:", modificado);
+    res.redirect('/listado.html');
   },
 
   eliminar: async (req, res) => {

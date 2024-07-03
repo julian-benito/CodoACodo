@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         <h4>${registro.origen}</h4>
         <h4>${registro.precio}</h4>
         <h4>${registro.urlimagen}</h4>
+        <h4>${registro.nombre_categoria}</h4>
         <a href="/modificar/${registro.id}">modificar</a>
         <button onclick="eliminarProducto(${registro.id})">eliminar</button>  
       </div>

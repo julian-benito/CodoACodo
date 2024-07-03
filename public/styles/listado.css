@@ -33,7 +33,7 @@ section {
     box-sizing: border-box;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr) repeat(2, 0.2fr);
+    grid-template-columns: repeat(5, 1fr) repeat(2, 0.2fr);
     gap: 10px;
     align-items: center;
     font-family: "Josefin Sans", sans-serif;
@@ -50,7 +50,7 @@ section {
       width: 100%;
       width: 100%;
       display: grid;
-      grid-template-columns: repeat(4, 1fr) repeat(2, 0.2fr);
+      grid-template-columns: repeat(5, 1fr) repeat(2, 0.2fr);
       gap: 10px;
       align-items: center;
       margin-bottom: 1rem;
@@ -92,7 +92,7 @@ section {
   & form {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr) 0.7fr;
+    grid-template-columns: repeat(5, 1fr) 0.7fr;
     gap: 40px;
     font-family: "Josefin Sans", sans-serif;
     font-size: 0.9rem;
