@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", async function () {
           <div class="card__texts">
             <h5>${registro.nombre}</h5>
             <h6>${registro.origen}</h6>
+            <h4>${registro.nombre_categoria}</h4>
             <div class="card__price">
               <h6>$${registro.precio}</h6>
               <button class="agregar-carrito" data-nombre="${registro.nombre}" data-precio="${registro.precio}">Añadir</button>

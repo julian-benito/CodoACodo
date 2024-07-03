@@ -5,7 +5,7 @@
     <div class="nav__container">
 
       <div class="nav__mobile">
-        <a href="/index.html"><img src="./imagenes/iconos/icono3.png" alt="" class="img__logo"></a>
+        <a href="/index.html"><img src="/imagenes/iconos/icono3.png" alt="" class="img__logo"></a>
         <a class="abrirMenu" id="abrir"><img src="/imagenes/iconos/align-justify.png" alt="" class="abrir"></a>
         <a class="cerrarMenu cerrar" id="cerrar"><img src="/imagenes/iconos/cerrar.png" alt=""></a>
       </div>
@@ -23,8 +23,8 @@
         </ul>
 
         <div class="nav__icons">
-          <a href="/carrito"><img src="./imagenes/iconos/shopping-cart.png" alt="" class="nav__icon"><span id="cuentaCarrito">0</span></a>
-          <img src="./imagenes/iconos/user.png" alt="">
+          <a href="/carrito"><img src="/imagenes/iconos/shopping-cart.png" alt="" class="nav__icon"><span id="cuentaCarrito">0</span></a>
+          <img src="/imagenes/iconos/user.png" alt="">
         </div>
 
       </div>
@@ -42,6 +42,7 @@
       <h4>Origen</h4>
       <h4>Precio</h4>
       <h4>Urlimagen</h4>
+      <h4>Categoria</h4>
     </article>
 
     <form action="/modificar?_metodo=PUT" method="POST">
@@ -50,6 +51,7 @@
       <input type="number" name="precio" value="<%= registro.precio %>">
       <input type="text" name="urlimagen" value="<%= registro.urlimagen %>">
       <input type="hidden" name="idMod" value="<%= registro.id %>">
+      <input type="number" name="categoria_id" value="<%= registro.nombre_categoria %>">
       <input type="submit" value="Actualizar">
     </form>
 

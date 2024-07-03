@@ -30,7 +30,7 @@ section {
 
   & .listado__title {
     box-sizing: border-box;
-    width: 63%;
+    width: 67%;
     display: flex;
     justify-content: space-between;
     font-family: "Josefin Sans", sans-serif;
@@ -41,7 +41,6 @@ section {
 
   & #listado {
     width: 100%;
-    margin-top: 1rem;
 
     & div {
       width: 100%;
